@@ -1,7 +1,21 @@
 repos:
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v3.4.0
+    rev: 406f0d1a4ffcd9eb0be9f0f6b824df619b38f41e
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
         args: ["--strict"]
+  - repo: https://github.com/google/yapf
+    rev: 3e6cd99b6652cd00867b86e5e82a1dbccc5c0f72
+    hooks:
+    -   id: yapf
+        args: ["--strict"]
+  - repo: https://github.com/PyCQA/isort
+    rev: c655831799765e9593989ee12faba13b6ca391a5
+    hooks:
+    -   id: isort
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 2c9f875913ee60ca25ce70243dc24d5b6415598c
+    hooks:
+    -   id: check-ast
+    -   id: check-added-large-files
